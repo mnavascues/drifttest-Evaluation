@@ -3,11 +3,15 @@ source("src/fun/ColorBlindPalette.R")
 sigma_values <- c(0.000,0.500,0.750,0.800,0.850,
                   0.900,0.925,0.950,0.975,1.000)
 
-pdf(file="results/FCvsFST.pdf",width=4,height=7)
+pdf(file="results/FCvsFSTsuppl.pdf",width=4,height=3)
 
-par(mfrow=c(2,1),
-    mar=c(2,2,0.2,0.2)+0.1,
-    oma=c(3,3,0,0))
+#par(mfrow=c(2,1),
+#    mar=c(2,2,0.2,0.2)+0.1,
+#    oma=c(3,3,0,0))
+
+par(mar=c(4,4,0.2,0.2)+0.1)
+
+
 
 # PLOT FOR SIMPLE MODEL
 
@@ -23,9 +27,10 @@ boxplot( NeHatFst/2,
          col = cbPalette1[6],
          border = cbPalette1[6],
          names = c("0"),
-         ylab = expression("effective population size, "*italic(N[e])),
+         ylab = expression("effective population size, "*italic(N)[e]),
          xlab = expression("selfing rate, "*sigma),
-         ylim = c(0,1000),
+         cex.lab=0.75,
+         ylim = c(0,600),
          xlim = c(0,1) ,cex.axis=0.7,las=1)
 
 boxplot( NeHatFc/2,
@@ -80,9 +85,9 @@ sigma_values_axis[c(7,9)]<-NA
 lines(sigma_values,trueNe,lty=2)
 axis(side=1,at=sigma_values_axis,las=2,cex.axis=0.6)
 box()
-text(0.05,950,"A",cex=1.5)
+#text(0.05,950,"A",cex=1.5)
 
-legend(x=0.35,y=1000,
+legend(x=0,y=200,
        legend=c(expression(hat(italic(N))[e]*" from "*italic(F)[ST]),
                 expression(hat(italic(N))[e]*" from "*italic(F)[C]),
                 expression("true "*italic(N)[e])),
@@ -92,11 +97,22 @@ legend(x=0.35,y=1000,
        border=c(cbPalette1[6],
                 cbPalette1[7],
                 NA),
-       lty=c(NA,NA,2)
-)
+       lty=c(NA,NA,2),
+       cex=0.75,
+       bty="n")
+
+dev.off()
+
 
 # PLOT FOR SLIM MODEL
 
+pdf(file="results/FCvsFSTmain.pdf",width=4,height=3)
+
+#par(mfrow=c(2,1),
+#    mar=c(2,2,0.2,0.2)+0.1,
+#    oma=c(3,3,0,0))
+
+par(mar=c(4,4,0.2,0.2)+0.1)
 
 
 sim <- 21
@@ -112,8 +128,9 @@ boxplot( results$NeHatFst/2,
          col = cbPalette1[6],
          border = cbPalette1[6],
          names = c("0"),
-         ylab = expression("effective population size, "*italic(N[e])),
+         ylab = expression("effective population size, "*italic(N)[e]),
          xlab = expression("selfing rate, "*sigma),
+         cex.lab=0.75,
          ylim = c(0,1000),
          xlim = c(0,1)  ,cex.axis=0.7,las=1)
 
@@ -171,18 +188,32 @@ sigma_values_axis[c(7,9)]<-NA
 lines(sigma_values,trueNe,lty=2)
 axis(side=1,at=sigma_values_axis,las=2,cex.axis=0.6)
 box()
-text(0.05,950,"B",cex=1.5)
+#text(0.05,950,"B",cex=1.5)
 
-mtext(text=expression("selfing rate, "*sigma),
-      side=1,
-      line=1.2,
-      cex=1,
-      outer=TRUE)
-mtext(text=expression("effective population size, "*italic(N)[e]),
-      side=2,
-      line=1.2,
-      cex=1,
-      outer=TRUE)
+#mtext(text=expression("selfing rate, "*sigma),
+#      side=1,
+#      line=1.2,
+#      cex=1,
+#      outer=TRUE)
+#mtext(text=expression("effective population size, "*italic(N)[e]),
+#      side=2,
+#      line=1.2,
+#      cex=1,
+#      outer=TRUE)
+
+legend(x=0.25,y=1000,
+       legend=c(expression(hat(italic(N))[e]*" from "*italic(F)[ST]),
+                expression(hat(italic(N))[e]*" from "*italic(F)[C]),
+                expression("true "*italic(N)[e])),
+       fill=c(cbPalette1[6],
+              cbPalette1[7],
+              NA),
+       border=c(cbPalette1[6],
+                cbPalette1[7],
+                NA),
+       lty=c(NA,NA,2),
+       cex=0.75,
+       bty="n")
 
 dev.off()
 

@@ -222,13 +222,13 @@ if (Ne_only){
   
   threshold4ROC <- seq(0,1,0.001)
   FPR <- TPR <- array(NA,length(threshold4ROC))
-  nuetral_loci <- intersect(which(results_per_locus$neutral),
+  neutral_loci <- intersect(which(results_per_locus$neutral),
                             which(!is.na(results_per_locus$p_value)))
   selected_loci <- intersect(intersect(which(!results_per_locus$neutral),
                                        which(results_per_locus$centimorgan<=1)),
                              which(!is.na(results_per_locus$p_value)))
   for (T.hold in seq_along(threshold4ROC)){
-    FPR[T.hold] <- sum(results_per_locus$p_value[nuetral_loci] <= threshold4ROC[T.hold])/length(nuetral_loci)
+    FPR[T.hold] <- sum(results_per_locus$p_value[neutral_loci] <= threshold4ROC[T.hold])/length(neutral_loci)
     TPR[T.hold] <- sum(results_per_locus$p_value[selected_loci] <= threshold4ROC[T.hold])/length(selected_loci)
   }
   pdf(file=paste0("results/",simID,"/ROC_curve.pdf"))
@@ -246,7 +246,8 @@ if (Ne_only){
   
   
   
-  save(SelectionFootprint_top50Pvalue,
+  save(fst_with_distance,
+       SelectionFootprint_top50Pvalue,
        SelectionFootprint_thresholdPvalue0.001,
        SelectionFootprint_thresholdqvalue0.05,
        FPR_top50Pvalue,

@@ -1,4 +1,4 @@
-number_of_sims <- 30
+number_of_sims <- 60
 
 sim_table <- data.frame(simID=array(NA,number_of_sims),
                         sigma=array(NA,number_of_sims),
@@ -43,6 +43,6 @@ for (sim in 1:number_of_sims){
   sim_table$number_of_replicates[sim]      <- number_of_replicates
 
 }
-
+save(sim_table,file="results/simtable.RData")
 
 

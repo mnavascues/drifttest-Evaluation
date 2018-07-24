@@ -3,9 +3,9 @@
 # Set seed for random number generation
 seed4random <- 1623656
 # Simulation ID for file identification
-simID <- "scenario002"
+simID <- "test"
 # selfing rate
-sigma <- 1 
+sigma <- 0.95 
 # mutation rate per bp
 u <- 1e-8
 # recombination rate per bp
@@ -23,8 +23,9 @@ dominance_coef <- 1
 # length of pure drift period (number of times the population size)
 number_of_times       <- 20 # see below
 # Adaptation mode: "NM"=new mutation; "SV"=standing variation
-selection_mode <- "NM"
-initial_frequency <- 0
+selection_mode <- "SV"
+initial_frequency <- 0.8
+fixed_advantageous_allele <- "derived"
 # number of generations between samples
 selection_period_duration <- 25
 # sample size
@@ -34,7 +35,7 @@ sample_size_loci <- 10000    # number of loci sampled for demographic inference)
 MAF_threshold   <- 0.05
 # replicate ID
 #replic  <- 0
-number_of_replicates <- 30
+number_of_replicates <- 2
 drift_period_between_replicates <- 20
 # if TRUE: estimate Ne from simulations only, do not perform neutrality tests
 Ne_only <- F
@@ -43,9 +44,9 @@ quiet   <- F
 # Do not output whole population
 no_whole_pop_out <- T
 # Remove simulation files
-remove_files     <- T
+remove_files     <- F
 # Number of threads for drifttest
-num_of_threads <- 8
+num_of_threads <- 16
 
 palette(cbPalette2)
 
@@ -100,3 +101,4 @@ parameter_file    <- paste0(working_dir,"/",simID,"_params.RData")
 #traject_file      <- paste0(working_dir,"/",simID,"_",replic,"_trajectory.RData") 
 #drifttest_infile  <- paste0(working_dir,"/",simID,"_",replic,"_drifttest.dat") 
 #drifttest_outfile <- paste0(working_dir,"/",simID,"_",replic,"_drifttest.out") 
+

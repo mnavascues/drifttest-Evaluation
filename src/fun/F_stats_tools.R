@@ -556,6 +556,32 @@ compute_FST_from_counts <- function(counts,multiallelic = TRUE) {
   return(F_ST)
 }
 
+single_locus_compute_FST_from_counts <- function(counts,multiallelic = TRUE) {
+  r <- ncol(counts) / 2
+  l <- seq(1,(2 * r),2)
+  ss <- counts[,l] + counts[,(l + 1)]	
+  ss2 <- sum((counts[,l] + counts[,(l + 1)])^2)
+  n <- sum(ss)
+  nc <- (n - ss2 / n) / (r - 1.0);
+  p <- counts[,l] / ss
+  q <- counts[,(l + 1)] / ss
+  pbar <- sum(counts[,l]) / sum(ss)
+  qbar <- sum(counts[,(l + 1)]) / sum(ss) 
+  SSI <- sum(ss * (p - p^2) + ss * (q - q^2))
+  SSP <- sum(ss * (p - pbar)^2 + ss * (q - qbar)^2)		
+  MSI <- SSI / (n - r);
+  MSP <- SSP / (r - 1.0);
+  if (multiallelic) {
+    F_ST <- sum(MSP - MSI)  / sum(MSP + (nc - 1) * MSI)
+  }
+  else {
+    F_ST <- (MSP - MSI)  / (MSP + (nc - 1) * MSI)
+  }
+  return(F_ST)
+}
+
+
+
 
 compute_FST_from_genotype_counts <- function(genotypes) {
   

@@ -1,6 +1,8 @@
 #########################################################################################
 #
-# Script to evaluate the "Fc outlier method" modified from Goldringer and Bataillon 2002
+# Script to evaluate the temporal Fst outlier method implemented in DriftTest
+#
+# (method modified from Fc outlier method by Goldringer and Bataillon 2002)
 #
 # by A. Becheler, R. Vitalis & M. Navascués
 # 
@@ -70,6 +72,8 @@ while (replic <= number_of_replicates){
   # write SLiM input files and run SLiM for selection period
   source("src/step4_simulation_selection.R") 
 
+  
+  if(!skip_selection){
   # read SLiM output files from selection period
   # sample individuals and loci
   source("src/step5_sample_output.R")
@@ -78,7 +82,8 @@ while (replic <= number_of_replicates){
   # 1. estimate Fst, Ne (all loci)
   # 2. test for outliers (locus by locus)
   source("src/step6_outlier_test.R")
-
+  }
+  
 }
 
 # Calculate FPR and footprint of selection

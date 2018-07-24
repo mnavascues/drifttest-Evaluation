@@ -38,7 +38,11 @@ if (Ne_only){
   
   results <- data.frame(Fst_hat = array(NA,number_of_replicates),
                         Fis_hat = array(NA,number_of_replicates),
-                        Ne_hat  = array(NA,number_of_replicates))
+                        Ne_hat  = array(NA,number_of_replicates),
+                        Fst_neutral_chr = array(NA,number_of_replicates),
+                        Ne_neutral_chr = array(NA,number_of_replicates),
+                        Fst_selected_chr = array(NA,number_of_replicates),
+                        Ne_selected_chr = array(NA,number_of_replicates))
   
 }
 

@@ -7,6 +7,9 @@ if (Ne_only){
   results$NeHatFst[replic] <- EstimateNe.F_ST(Fstats$F_ST,selection_period_duration)
   results$Fis_hat[replic]  <- Fstats$F_IS
   
+  
+  
+  
   replic <- replic+1
 
 }else if (advantageous_allele_not_lost){
@@ -263,6 +266,7 @@ if (Ne_only){
             col=replic)        
     }
   }
+  
   dev.set(which = dev.prev())
   dev.set(which = dev.prev())
   dev.set(which = dev.prev())
@@ -286,6 +290,114 @@ if (Ne_only){
 
   results_per_replica=results_per_locus[sample_size_loci*(replic-1)+(1:sample_size_loci),]
   
+  
+  if(neutral_chromosome==1){
+    
+    results$Fst_neutral_chr[replic] <- compute_Fstats(SNP_data$genotype_data[,c(1,2,chr1+2)])$F_ST
+    results$Ne_neutral_chr[replic]  <- EstimateNe.F_ST(results$Fst_neutral_chr[replic],selection_period_duration)
+    
+    results$Fst_selected_chr[replic] <- compute_Fstats(SNP_data$genotype_data[,c(1,2,chr2+2)])$F_ST
+    results$Ne_selected_chr[replic]  <- EstimateNe.F_ST(results$Fst_selected_chr[replic],selection_period_duration)
+    
+    distance_window <- Fst_window <- Ne_window <- array(NA,201)
+    
+    subset_of_loci <- intersect(which(whole_pop_data$SNP_table$x<m2$x+5e5),
+                                which(whole_pop_data$SNP_table$x>m2$x-5e5))
+    subset_of_loci <- intersect(subset_of_loci,
+                                which(whole_pop_data$SNP_table$x>genome_length/2))
+    #print(length(subset_of_loci))
+    Fst_window[1] <- compute_Fstats(whole_pop_data$genotype_data[,c(1,2,subset_of_loci+2)])$F_ST
+    Ne_window[1] <- EstimateNe.F_ST(Fst_window[1],selection_period_duration)
+    distance_window[1] <- 0
+    
+    for (i in 1:100){
+      subset_of_loci <- intersect(which(whole_pop_data$SNP_table$x>m2$x+5e5+1e6*(i-1)),
+                                  which(whole_pop_data$SNP_table$x<m2$x+5e5+1e6*i))
+      subset_of_loci <- intersect(subset_of_loci,
+                                  which(whole_pop_data$SNP_table$x>genome_length/2))
+      #print(length(subset_of_loci))
+      if (length(subset_of_loci)>100){
+        Fst_window[i+1] <- compute_Fstats(whole_pop_data$genotype_data[,c(1,2,subset_of_loci+2)])$F_ST
+        Ne_window[i+1] <- EstimateNe.F_ST(Fst_window[i+1],selection_period_duration)
+      }
+      subset_of_loci <- intersect(which(whole_pop_data$SNP_table$x<m2$x-5e5-1e6*(i-1)),
+                                  which(whole_pop_data$SNP_table$x>m2$x-5e5-1e6*i))
+      subset_of_loci <- intersect(subset_of_loci,
+                                  which(whole_pop_data$SNP_table$x>genome_length/2))
+      #print(length(subset_of_loci))
+      if (length(subset_of_loci)>100){
+        Fst_window[i+101] <- compute_Fstats(whole_pop_data$genotype_data[,c(1,2,subset_of_loci+2)])$F_ST
+        Ne_window[i+101] <- EstimateNe.F_ST(Fst_window[i+101],selection_period_duration)
+      }
+      distance_window[i+1]<-distance_window[i+101]<-1e6*i
+    }
+    
+  }else if(neutral_chromosome==2){
+
+    results$Fst_neutral_chr[replic] <- compute_Fstats(SNP_data$genotype_data[,c(1,2,chr2+2)])$F_ST
+    results$Ne_neutral_chr[replic]  <- EstimateNe.F_ST(results$Fst_neutral_chr[replic],selection_period_duration)
+    
+    results$Fst_selected_chr[replic] <- compute_Fstats(SNP_data$genotype_data[,c(1,2,chr1+2)])$F_ST
+    results$Ne_selected_chr[replic]  <- EstimateNe.F_ST(results$Fst_selected_chr[replic],selection_period_duration)
+    
+    
+    distance_window <- Fst_window <- Ne_window <- array(NA,201)
+    
+    subset_of_loci <- intersect(which(whole_pop_data$SNP_table$x<m2$x+5e5),
+                                which(whole_pop_data$SNP_table$x>m2$x-5e5))
+    subset_of_loci <- intersect(subset_of_loci,
+                                which(whole_pop_data$SNP_table$x<=genome_length/2))
+    #print(length(subset_of_loci))
+    Fst_window[1] <- compute_Fstats(whole_pop_data$genotype_data[,c(1,2,subset_of_loci+2)])$F_ST
+    Ne_window[1] <- EstimateNe.F_ST(Fst_window[1],selection_period_duration)
+    distance_window[1] <- 0
+      
+    for (i in 1:100){
+      subset_of_loci <- intersect(which(whole_pop_data$SNP_table$x>m2$x+5e5+1e6*(i-1)),
+                                  which(whole_pop_data$SNP_table$x<m2$x+5e5+1e6*i))
+      subset_of_loci <- intersect(subset_of_loci,
+                                  which(whole_pop_data$SNP_table$x<=genome_length/2))
+      #print(length(subset_of_loci))
+      if (length(subset_of_loci)>100){
+        Fst_window[i+1] <- compute_Fstats(whole_pop_data$genotype_data[,c(1,2,subset_of_loci+2)])$F_ST
+        Ne_window[i+1] <- EstimateNe.F_ST(Fst_window[i+1],selection_period_duration)
+      }
+      subset_of_loci <- intersect(which(whole_pop_data$SNP_table$x<m2$x-5e5-1e6*(i-1)),
+                                  which(whole_pop_data$SNP_table$x>m2$x-5e5-1e6*i))
+      subset_of_loci <- intersect(subset_of_loci,
+                                  which(whole_pop_data$SNP_table$x<=genome_length/2))
+      #print(length(subset_of_loci))
+      if (length(subset_of_loci)>100){
+        Fst_window[i+101] <- compute_Fstats(whole_pop_data$genotype_data[,c(1,2,subset_of_loci+2)])$F_ST
+        Ne_window[i+101] <- EstimateNe.F_ST(Fst_window[i+101],selection_period_duration)
+      }
+      distance_window[i+1]<-distance_window[i+101]<-1e6*i
+    }
+
+    #window_first_position <- seq(from=1,to=length(chr1)-200,by=20)
+    
+    
+    #distance_window <- Fst_window <- Ne_window <- array(NA,length(window_first_position))
+    #for (i in seq_along(window_first_position)){
+    #  window <- window_first_position[i]:(window_first_position[i]+199)
+    #  window_center <- window_first_position[i]+99
+      
+    #  distance_window[i] <- abs(SNP_data$SNP_table$x[window_center]-m2$x)
+    #  Fst_window[i]      <- compute_Fstats(SNP_data$genotype_data[,c(1,2,window+2)])$F_ST
+    #  Ne_window[i]       <- EstimateNe.F_ST(Fst_window[i],selection_period_duration)
+    #}
+        
+  }
+  if (replic==1){
+    fst_with_distance <- data.frame(distance=distance_window,Fst=Fst_window,Ne=Ne_window)
+  }else{
+    fst_with_distance <- rbind(fst_with_distance,data.frame(distance=distance_window,Fst=Fst_window,Ne=Ne_window))
+    
+  }
+  plot(fst_with_distance$distance,fst_with_distance$Fst,xlim=c(0,20000000))  
+
+  rm(whole_pop_data)
+  gc()
   #save data from replicate
   save(SNP_data,
        trajectory,
@@ -297,8 +409,9 @@ if (Ne_only){
        z2_p_values,
        file=data_file)
   
+
   
-  
+
   replic <- replic+1
 }
 

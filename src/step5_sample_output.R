@@ -38,6 +38,7 @@ if (advantageous_allele=="derived"){
     advantageous_allele_not_lost <- TRUE
   }
 }
+if (skip_selection) advantageous_allele_not_lost <- FALSE
 
 if(!advantageous_allele_not_lost){
   if (!quiet) cat(paste(Sys.time(),"Advantageous allele was lost in simulation",simID,"replicate",replic, "\n"))
@@ -90,6 +91,15 @@ if (advantageous_allele_not_lost | sel_coef==0){
                           sample_size_loci,
                           Ne_only)
   
+  whole_pop_data <-  Make_sample(haplotypes_1,
+                                 haplotypes_2,
+                                 SNP_table,
+                                 removed_loci,
+                                 c(N,N),
+                                 total_S,
+                                 Ne_only)
+  
+  
   if (!Ne_only){
   # write drifttest input file  
   write(sum(sample_size), file=drifttest_infile)
@@ -100,3 +110,6 @@ if (advantageous_allele_not_lost | sel_coef==0){
         append=T)
   }
 }
+
+
+

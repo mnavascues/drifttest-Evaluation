@@ -1,67 +1,77 @@
- R --no-save --args seed4random 1623656 simID "scenario007" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 30 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+ R --no-save --args seed4random 1623656 simID "scenario001" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario002" sigma 1 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario003" sigma 0.9 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario004" sigma 0.8 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario005" sigma 0.55 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario006" sigma 0.5 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
 
 
 
- R --no-save --args seed4random 1623656 simID "scenario008" sigma 0.75 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 30 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+ R --no-save --args seed4random 1623656 simID "scenario007" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
 
 
 
- R --no-save --args seed4random 1623656 simID "scenario009" sigma 0.99 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 30 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+ R --no-save --args seed4random 1623656 simID "scenario008" sigma 0.75 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
 
 
 
- R --no-save --args seed4random 1623656 simID "scenario010" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 30 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+ R --no-save --args seed4random 1623656 simID "scenario009" sigma 0.99 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
 
 
 
- R --no-save --args seed4random 1623656 simID "scenario011" sigma 0.5 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 30 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+ R --no-save --args seed4random 1623656 simID "scenario010" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
 
 
 
- R --no-save --args seed4random 1623656 simID "scenario012" sigma 0.75 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 30 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+ R --no-save --args seed4random 1623656 simID "scenario011" sigma 0.5 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
 
 
 
- R --no-save --args seed4random 1623656 simID "scenario013" sigma 0.80 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 30 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+ R --no-save --args seed4random 1623656 simID "scenario012" sigma 0.75 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
 
 
 
- R --no-save --args seed4random 1623656 simID "scenario014" sigma 0.85 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 30 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+ R --no-save --args seed4random 1623656 simID "scenario013" sigma 0.80 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
 
 
 
- R --no-save --args seed4random 1623656 simID "scenario015" sigma 0.90 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 30 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+ R --no-save --args seed4random 1623656 simID "scenario014" sigma 0.85 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
 
 
 
- R --no-save --args seed4random 1623656 simID "scenario016" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 30 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+ R --no-save --args seed4random 1623656 simID "scenario015" sigma 0.90 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
 
 
 
- R --no-save --args seed4random 1623656 simID "scenario017" sigma 0.99 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 30 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+ R --no-save --args seed4random 1623656 simID "scenario016" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
 
 
 
- R --no-save --args seed4random 1623656 simID "scenario018" sigma 1 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 30 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+ R --no-save --args seed4random 1623656 simID "scenario017" sigma 0.99 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
 
 
 
- R --no-save --args seed4random 1623656 simID "scenario019" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.2 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 30 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+ R --no-save --args seed4random 1623656 simID "scenario018" sigma 1 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
 
 
 
-
- R --no-save --args seed4random 1623656 simID "scenario020" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.2 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 30 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
-
-
-
+ R --no-save --args seed4random 1623656 simID "scenario019" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.2 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
 
 
 
 
+ R --no-save --args seed4random 1623656 simID "scenario020" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.2 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
 
 
- R --no-save --args seed4random 1623656 simID "scenario021" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.0 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(T)" < src/main.R
+R --no-save --args seed4random 1623656 simID "scenario021" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.0 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.5 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+
+
 
 R --no-save --args seed4random 1623656 simID "scenario022" sigma 0.5 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.0 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(T)" < src/main.R
 
@@ -85,3 +95,457 @@ R --no-save --args seed4random 1623656 simID "scenario030" sigma 1 u 1e-8 r 1e-8
 
 
 
+
+
+
+
+R --no-save --args seed4random 1623656 simID "scenario031" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.1 fixed_advantageous_allele "ancestral" selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(F)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario032" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.2 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario033" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.3 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario034" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.4 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario035" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.5 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario036" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.6 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario037" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.7 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario038" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.8 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario039" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.9 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R --no-save --args seed4random 1623656 simID "scenario040" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.1 fixed_advantageous_allele "derived" selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(F)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario041" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.2 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario042" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.3 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario043" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.4 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario044" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.5 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario045" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.6 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario046" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.7 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario047" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.8 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario048" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.9 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario049" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.1 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario050" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.2 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario051" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.3 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario052" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.4 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario053" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.1 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 50 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario054" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.1 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 100 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario055" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 50 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario056" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 100 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario057" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 10 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario058" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 5 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario059" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.1 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 200 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario060" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 200 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.05 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cls
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario101" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario102" sigma 1 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario103" sigma 0.9 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario104" sigma 0.8 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario106" sigma 0.5 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario107" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario108" sigma 0.75 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario109" sigma 0.99 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario110" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario111" sigma 0.5 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario112" sigma 0.75 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario113" sigma 0.80 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario114" sigma 0.85 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario115" sigma 0.90 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario116" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario117" sigma 0.99 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario118" sigma 1 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario119" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.2 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario120" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.2 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+
+
+
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario121" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.0 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(T)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario122" sigma 0.5 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.0 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(T)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario123" sigma 0.75 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.0 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(T)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario124" sigma 0.8 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.0 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(T)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario125" sigma 0.85 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.0 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(T)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario126" sigma 0.9 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.0 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(T)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario127" sigma 0.925 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.0 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(T)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario128" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.0 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(T)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario129" sigma 0.975 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.0 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(T)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario130" sigma 1 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.0 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(T)" < src/main.R
+
+
+
+
+
+
+
+
+
+R --no-save --args seed4random 1623656 simID "scenario131" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.1 fixed_advantageous_allele "ancestral" selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(F)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario132" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.2 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario133" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.3 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario134" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.4 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario135" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.5 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario136" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.6 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario137" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.7 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario138" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.8 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario139" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.9 fixed_advantageous_allele "ancestral"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R --no-save --args seed4random 1623656 simID "scenario140" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.1 fixed_advantageous_allele "derived" selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(F)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario141" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.2 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario142" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.3 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario143" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.4 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario144" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.5 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario145" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.6 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario146" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.7 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario147" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.8 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+R --no-save --args seed4random 1623656 simID "scenario148" sigma 0.95 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "SV" initial_frequency 0.9 fixed_advantageous_allele "derived"  selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 Ne_only "c(F)" < src/main.R
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario149" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.1 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario150" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.2 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario151" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.3 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario152" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.4 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 25 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario153" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.1 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 50 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario154" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.1 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 100 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario155" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 50 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario156" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 100 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario157" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 10 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario158" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 5 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+ R --no-save --args seed4random 1623656 simID "scenario159" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.1 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 200 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+
+
+
+
+
+
+ R --no-save --args seed4random 1623656 simID "scenario160" sigma 0 u 1e-8 r 1e-8 genome_length 5e8 N 500 sel_coef 0.5 dominance_coef 1 number_of_times 20 selection_mode "NM" initial_frequency -1 selection_period_duration 200 sample_size "c(50,50)" sample_size_loci 10000 MAF_threshold 0.0 number_of_replicates 100 drift_period_between_replicates 20 quiet "c(T)" no_whole_pop_out "c(T)" remove_files "c(T)" num_of_threads 16 < src/main.R
+ 
+ 
+ 

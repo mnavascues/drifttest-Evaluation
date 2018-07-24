@@ -1,7 +1,8 @@
 # SIMULATION OF THE PERIOD WITH SELECTION (in between samples)
 
 if (!quiet) cat(paste(Sys.time(),"Drift period between replicates for simulation:",simID,", replicate",replic,"\n"))
-  
+skip_selection <- FALSE
+
 # Drift period between replicates
 ############################################################################
   
@@ -87,12 +88,9 @@ if (selection_mode!="NM") {
     selection_mode<-"SV"
     warning("Adaptation mode undefined, using standing variation") 
   }
-  
-  
-  
-  
+
   # SELECTION ON STANDING VARIATION (changes selection coefficient of on a random locus)
-  
+  sampled_mut <- NA
   if (initial_frequency<=0 | initial_frequency>=1){
     # chose a random locus
     sampled_mut <- sample(x=nrow(mutation_table), size=1)
@@ -105,51 +103,77 @@ if (selection_mode!="NM") {
     if (initial_allele_count==0) initial_allele_count <- 1
     if (initial_allele_count==N*2) initial_allele_count <- N*2-1
     potential_loci <- which(mutation_table[,8]==initial_allele_count)
-    lower_limit <- initial_allele_count
-    upper_limit <- initial_allele_count
-    while (length(potential_loci)==0){
-      lower_limit <- lower_limit-1
-      if (lower_limit==0) lower_limit <- 1
-      upper_limit <- upper_limit+1
-      if (upper_limit==N*2) upper_limit <- N*2-1
-      potential_loci <- intersect(which(mutation_table[,8]>lower_limit),
-                                  which(mutation_table[,8]<upper_limit))
+    
+    if (length(potential_loci)==1){
+      sampled_mut <- potential_loci
+    }else if (length(potential_loci)>1){
+      sampled_mut <- sample(x=potential_loci,size=1)
+      skip_selection <- FALSE
+      
+      if (!quiet) cat(paste(Sys.time(),"Advantageus locus:",sampled_mut,"\n"))
+      if (!quiet) cat(paste(Sys.time(),"allele position:",mutation_table[sampled_mut,3],"\n"))
+      if (!quiet) cat(paste(Sys.time(),"allele count:",mutation_table[sampled_mut,8],"\n"))
+      
+    }else{
+      sampled_mut <- NA
+      skip_selection <- TRUE
+      cat(paste(Sys.time(),"NO LOCUS AVAILABLE AT THE REQUESTED FREQUENCY. Simulation:",simID,"\n"))
+      
     }
-    sampled_mut <- sample(x=potential_loci,size=1)
+    
+    #lower_limit <- initial_allele_count
+    #upper_limit <- initial_allele_count
+    #while (length(potential_loci)==0){
+    #  lower_limit <- lower_limit-1
+    #  if (lower_limit==0) lower_limit <- 1
+    #  upper_limit <- upper_limit+1
+    #  if (upper_limit==N*2) upper_limit <- N*2-1
+    #  potential_loci <- intersect(which(mutation_table[,8]>lower_limit),
+    #                              which(mutation_table[,8]<upper_limit))
+    #}
+    #sampled_mut <- sample(x=potential_loci,size=1)
   }
   
   # change selection coefficient of locus
-  levels(mutation_table[,2])    <- c("m1","m2") 
-  mutation_table[sampled_mut,2] <- "m2"
-  mutation_table[sampled_mut,4] <- sel_coef_replic
-  mutation_table[sampled_mut,5] <- dominance_coef_replic
+  if (!skip_selection){
+    levels(mutation_table[,2])    <- c("m1","m2") 
+    mutation_table[sampled_mut,2] <- "m2"
+    mutation_table[sampled_mut,4] <- sel_coef_replic
+    mutation_table[sampled_mut,5] <- dominance_coef_replic
+  }
 }
 
-# write initialzation file for slim (state of population at starting point of selection period)
-write(out_drift_lines[out_drift_pop_line:out_drift_mut_line], slim_init_selection)
-write.table(mutation_table, slim_init_selection, append=T, quote=F, col.names=F, row.names=F)
-write(out_drift_lines[-(1:(out_drift_gen_line-1))], slim_init_selection, append=T)
-#remove(mutation_table)
-
-
-# write input file for slim
-writeMutation          (file=slim_in_selection, number_of_types=2, h=c(0.5,dominance_coef_replic), DFE=c("f","f"), s=c(0,sel_coef_replic), append=F, append_mutation=F)
-writeMutationRate      (file=slim_in_selection, u=u)  
-writeGenomicElement    (file=slim_in_selection, number_of_types=1, mut_type=list(c("m1","m2")), prop=list(c(1,0)))
-writeChromosome        (file=slim_in_selection, element_type="g1", start=1, end=genome_length)
-writeRecombinationChrom(file=slim_in_selection, chr_num=chr_num, genome_length=genome_length, r=r, append=T)  
-writeGenerations       (file=slim_in_selection, t=selection_period_duration, append=T)
-writeDemography        (file=slim_in_selection, type="S", time=1, pop="p1", sigma=sigma)
-writeOutput            (file=slim_in_selection, type="A", time=selection_period_duration, filename=slim_out_selection)
-writeOutput            (file=slim_in_selection, type="T", time=1, mut_type="m2", append_output=T)
-writeOutput            (file=slim_in_selection, type="F", time=selection_period_duration, append_output=T)
-writeSeed              (file=slim_in_selection, seed=round(runif(1,-2^31,2^31)) )
-
-write("#INITIALIZATION",file=slim_in_selection,ncolumns=1,append=TRUE)
-write(slim_init_selection,file=slim_in_selection,ncolumns=1,append=TRUE)
-
-if (!quiet) cat(paste(Sys.time(),"SIMULATION OF THE PERIOD WITH SELECTION STARTS. Simulation:",simID,"\n"))
-system(paste("./bin/slim",slim_in_selection,">",slim_log_selection))
-if (!quiet) cat(paste(Sys.time(),"END OF SIMULATION OF THE PERIOD WITH SELECTION. Simulation:",simID,"\n"))
-system(paste0("mv ",slim_out_selection," bin/",slim_out_selection))
-system(paste0("mv ",slim_init_selection," bin/",slim_init_selection))
+if(!skip_selection){
+  
+  
+  # write initialization file for slim (state of population at starting point of selection period)
+  write(out_drift_lines[out_drift_pop_line:out_drift_mut_line], slim_init_selection)
+  write.table(mutation_table, slim_init_selection, append=T, quote=F, col.names=F, row.names=F)
+  write(out_drift_lines[-(1:(out_drift_gen_line-1))], slim_init_selection, append=T)
+  #remove(mutation_table)
+  
+  
+  # write input file for slim
+  writeMutation          (file=slim_in_selection, number_of_types=2, h=c(0.5,dominance_coef_replic), DFE=c("f","f"), s=c(0,sel_coef_replic), append=F, append_mutation=F)
+  writeMutationRate      (file=slim_in_selection, u=u)  
+  writeGenomicElement    (file=slim_in_selection, number_of_types=1, mut_type=list(c("m1","m2")), prop=list(c(1,0)))
+  writeChromosome        (file=slim_in_selection, element_type="g1", start=1, end=genome_length)
+  writeRecombinationChrom(file=slim_in_selection, chr_num=chr_num, genome_length=genome_length, r=r, append=T)  
+  writeGenerations       (file=slim_in_selection, t=selection_period_duration, append=T)
+  writeDemography        (file=slim_in_selection, type="S", time=1, pop="p1", sigma=sigma)
+  writeOutput            (file=slim_in_selection, type="A", time=selection_period_duration, filename=slim_out_selection)
+  writeOutput            (file=slim_in_selection, type="T", time=1, mut_type="m2", append_output=T)
+  writeOutput            (file=slim_in_selection, type="F", time=selection_period_duration, append_output=T)
+  writeSeed              (file=slim_in_selection, seed=round(runif(1,-2^31,2^31)) )
+  
+  write("#INITIALIZATION",file=slim_in_selection,ncolumns=1,append=TRUE)
+  write(slim_init_selection,file=slim_in_selection,ncolumns=1,append=TRUE)
+  
+  if (!quiet) cat(paste(Sys.time(),"SIMULATION OF THE PERIOD WITH SELECTION STARTS. Simulation:",simID,"\n"))
+  system(paste("./bin/slim",slim_in_selection,">",slim_log_selection))
+  if (!quiet) cat(paste(Sys.time(),"END OF SIMULATION OF THE PERIOD WITH SELECTION. Simulation:",simID,"\n"))
+  system(paste0("mv ",slim_out_selection," bin/",slim_out_selection))
+  system(paste0("mv ",slim_init_selection," bin/",slim_init_selection))
+  
+  
+}

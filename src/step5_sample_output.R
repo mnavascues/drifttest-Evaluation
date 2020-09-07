@@ -73,10 +73,6 @@ if (advantageous_allele_not_lost | sel_coef==0){
   removed_loci <- unique(SNP_table$removed_loci)
   SNP_table    <- SNP_table$SNP_table
   
-  if (!no_whole_pop_out){
-    save(haplotypes_1,haplotypes_2,m2,SNP_table,file=whole_pop_file)
-    write(paste("Whole population configuration (SNP table + haplotypes) saved into:",whole_pop_file), file=log_file,append=T)
-  }
   
   total_S <- nrow(SNP_table)
   write(paste("Total number of bi-allelic loci in the replicate",replic,":",total_S), file=log_file,append=T)
@@ -91,13 +87,17 @@ if (advantageous_allele_not_lost | sel_coef==0){
                           sample_size_loci,
                           Ne_only)
   
-  whole_pop_data <-  Make_sample(haplotypes_1,
-                                 haplotypes_2,
-                                 SNP_table,
-                                 removed_loci,
-                                 c(N,N),
-                                 total_S,
-                                 Ne_only)
+  if (!no_whole_pop_out){
+    whole_pop_data <-  Make_sample(haplotypes_1,
+                                   haplotypes_2,
+                                   SNP_table,
+                                   removed_loci,
+                                   c(N,N),
+                                   total_S,
+                                   Ne_only)
+    save(whole_pop_data,m2,SNP_table,file=whole_pop_file)
+    write(paste("Whole population configuration (SNP table + haplotypes) saved into:",whole_pop_file), file=log_file,append=T)
+  }
   
   
   if (!Ne_only){

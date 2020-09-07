@@ -83,7 +83,7 @@ while (replic <= number_of_replicates){
   # 2. test for outliers (locus by locus)
   source("src/step6_outlier_test.R")
   }
-  
+  gc()
 }
 
 # Calculate FPR and footprint of selection

@@ -21,15 +21,15 @@ sel_coef <- 0.5
 # dominance cofficient
 dominance_coef <- 1
 # length of pure drift period (number of times the population size)
-number_of_times       <- 20 # see below
+number_of_times       <- 20 #20 #5 see below
 # Adaptation mode: "NM"=new mutation; "SV"=standing variation
-selection_mode <- "SV"
+selection_mode <- "NM"
 initial_frequency <- 0.8
 fixed_advantageous_allele <- "derived"
 # number of generations between samples
 selection_period_duration <- 25
 # sample size
-sample_size      <- c(50,50) #c(40,60)   # number of diploid individuals sampled
+sample_size      <- c(50,30) #c(40,60)   # number of diploid individuals sampled
 sample_size_loci <- 10000    # number of loci sampled for demographic inference)
 #threshold for mimimum allele frequency
 MAF_threshold   <- 0.05
@@ -38,15 +38,15 @@ MAF_threshold   <- 0.05
 number_of_replicates <- 2
 drift_period_between_replicates <- 20
 # if TRUE: estimate Ne from simulations only, do not perform neutrality tests
-Ne_only <- F
+Ne_only <- F # DO NOT SET TO TRUE /!\
 # Do not output progress messages
 quiet   <- F
 # Do not output whole population
-no_whole_pop_out <- T
+no_whole_pop_out <- F # DO NOT SET TO TRUE /!\
 # Remove simulation files
 remove_files     <- F
 # Number of threads for drifttest
-num_of_threads <- 16
+num_of_threads <- 48
 
 palette(cbPalette2)
 

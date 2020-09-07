@@ -20,7 +20,7 @@ To run with the default options:
 
 $ R --no-save < main.R
 
-In order to run with other options use flag –args plus name_variable value_variable:
+In order to run with other options use flag --args plus name_variable value_variable:
 
 $ R --no-save --args simID "scenario1" sigma 0.5 < main.R
 

@@ -6,6 +6,7 @@ slim
 results/*
 results/ResultsOld/*
 bin/*
+data/*
 Arabidopsis.pdf
 Arabidopsis.tex
 Kimura.R

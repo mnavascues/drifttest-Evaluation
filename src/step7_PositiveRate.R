@@ -220,12 +220,12 @@ if (Ne_only){
                                                    positive_rate = SelectionFootprint_thresholdPvalue0.001)
   
   
-  threshold4ROC <- seq(0,1,0.001)
+  threshold4ROC <- c(0,10^-seq(10,3,-0.1),seq(0.002,0.1,0.001))
   FPR <- TPR <- array(NA,length(threshold4ROC))
   neutral_loci <- intersect(which(results_per_locus$neutral),
                             which(!is.na(results_per_locus$p_value)))
   selected_loci <- intersect(intersect(which(!results_per_locus$neutral),
-                                       which(results_per_locus$centimorgan<=1)),
+                                       which(results_per_locus$distance==0)), #results_per_locus$centimorgan<=1
                              which(!is.na(results_per_locus$p_value)))
   for (T.hold in seq_along(threshold4ROC)){
     FPR[T.hold] <- sum(results_per_locus$p_value[neutral_loci] <= threshold4ROC[T.hold])/length(neutral_loci)
@@ -241,7 +241,6 @@ if (Ne_only){
   abline(0,1,col="red")
   dev.off()
   ROC<-data.frame(FPR,TPR)
-  
   
   
   

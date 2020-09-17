@@ -226,10 +226,12 @@ if (Ne_only){
   # QQ PLOT drifttest
   ###########################        
   dev.set(which = dev.next())
+  max_value <- ceiling(max(-log10(res_driftest$p_value),na.rm=T))
+  if(is.infinite(max_value)){max_value<-20}
   qqman::qq(res_driftest$p_value,
             type="l",
-            xlim=c(0,ceiling(max(-log10(res_driftest$p_value),na.rm=T))),
-            ylim=c(0,ceiling(max(-log10(res_driftest$p_value),na.rm=T))),
+            xlim=c(0,max_value),
+            ylim=c(0,max_value),
             main=paste("Simulation",simID,"replicate",replic))
   
   # QQ PLOT drifttest ONLY NEUTRAL
@@ -237,8 +239,8 @@ if (Ne_only){
   dev.set(which = dev.next())
   qqman::qq(res_driftest$p_value[loci4false_positive],
             type="l",
-            xlim=c(0,ceiling(max(-log10(res_driftest$p_value),na.rm=T))),
-            ylim=c(0,ceiling(max(-log10(res_driftest$p_value),na.rm=T))),
+            xlim=c(0,max_value),
+            ylim=c(0,max_value),
             main=paste("Simulation",simID,"replicate",replic))
   
   
